@@ -1,0 +1,10 @@
+deploy-to-server:
+  only:
+    - master
+  script:
+    - yarn install
+    - bash exec.sh
+  variables:
+    GIT_STRATEGY: clone
+  tags:
+    - adminui
